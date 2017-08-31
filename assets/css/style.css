@@ -8,7 +8,6 @@
  *
  */
 
-
 body {
     background: #fff;
     text-align: center;
@@ -161,10 +160,31 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #004F81
 .navbar>.container .navbar-brand { margin-left: 0; }
 
 .navbar-brand {
-	width: 167px;
-	height: 106px;
-	background: url(../img/logo.png) left center no-repeat;
-	text-indent: -99999px;
+	width: auto;
+  margin-top: 30px;
+  color: #333;
+}
+
+.navbar-brand .title {
+  font-size: 48px;
+  float: left;
+  clear: both;
+  padding-bottom: 20px;
+  font-family: 'Over the Rainbow', cursive;
+  transition: all 0.5s linear;
+}
+
+.navbar-brand .title:hover {
+  font-size: 48px;
+  color: #004F81;
+  transition: all 0.5s linear;
+}
+
+.navbar-brand .subtitle {
+  float: left;
+  font-size: 17px;
+  margin-left: 82px;
+  margin-top: -10px;
 }
 
 /***** Slider *****/
@@ -262,7 +282,6 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #004F81
 }
 
 .presentation-container h1 {
-    font-family: 'Lobster', cursive;
     font-size: 30px;
     color: #5d5d5d;
     font-weight: bold;
@@ -356,6 +375,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #004F81
     padding-bottom: 20px;
     background: #f8f8f8;
     border-bottom: 2px solid #004F81;
+    height: 350px;
 }
 
 .work:hover img {
@@ -369,7 +389,23 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #004F81
 }
 
 .work .work-bottom {
-    margin-top: 15px;
+  margin-top: 22px;
+}
+
+.work .work-bottom1 {
+    /*margin-top: 15px;*/
+}
+
+.work .work-bottom2 {
+    /*margin-top: 15px;*/
+}
+
+.work .work-bottom3 {
+    /*margin-top: 15px;*/
+}
+
+.work .work-bottom4 {
+    margin-top: -5px;
 }
 
 .work h3 {
@@ -463,7 +499,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #004F81
 /***** Footer *****/
 
 footer {
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
     padding-bottom: 10px;
     background: #f8f8f8 url(../img/graph.png);
     -moz-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset; -webkit-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset; box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset;
