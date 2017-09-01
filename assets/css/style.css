@@ -612,8 +612,8 @@ footer {
     margin-top: 5px;
     text-align: right;
 }
-.footer-social a { margin: 0 0 0 10px; font-size: 26px; color: #888; float:right}
-.footer-social .g{font-size: 14px; float: right; top: -5px}
+.footer-social a { margin: 0 0 0 10px; font-size: 26px; color: #888;}
+.footer-social .g{font-size: 15px; top: -1em !important;}
 .footer-social a:hover, .footer-social a:focus { color: #004F81; }
 
 
