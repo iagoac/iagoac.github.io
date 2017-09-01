@@ -3,7 +3,8 @@
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 .fa{transition: all 0.5s linear;}
-.fa:hover{color:#004F81;-ms-transform: scale(1.4, 1.4);-webkit-transform: scale(1.4, 1.4);transform: scale(1.4, 1.4);transition: all 0.5s linear;}
+nav .fa:hover, .service-icon .fa:hover, .row .fa:hover{color:#004F81;-ms-transform: scale(1.4, 1.4);-webkit-transform: scale(1.4, 1.4);transform: scale(1.4, 1.4);}
+.big-link-1 .fa:hover, .big-link-2 .fa:hover {transform: none !important; color: white;}
 .fa-rg:hover{color:#00ccbb;}
 .fa-github:hover{color:#24292e}
 .fa-lattes{background-image:url("../../img/lattes.png");}
