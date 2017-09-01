@@ -160,7 +160,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #004F81
 .navbar>.container .navbar-brand { margin-left: 0; }
 
 .navbar-brand {
-	width: auto;
+    width: auto;
   margin-top: 18px;
   color: #333;
 }
