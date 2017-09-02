@@ -48,6 +48,43 @@
     font-style: normal;
 }
 
+/* CSS Popup */
+/* Tooltip text */
+.popup .popuptext {
+  top: -500px;
+  background: none repeat scroll 0 0 #EEEEEE;
+  color: #333333;
+  width: 0px;
+  height: 0;
+  overflow:hidden;
+  left: 0;
+  line-height: 20px;
+  position: absolute;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+/* Show the popup text when you mouse over the popup container */
+.popup:hover .popuptext {
+  display:block;
+  left:0px;
+  height:auto;
+  height: 200px;
+  width: 200px;
+  z-index: 99999999999999999999999;
+  left: 90%;
+  top: -50%;
+  border: 1px solid #DADADA;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
 body {
     background: #fff;
     text-align: center;
@@ -415,7 +452,9 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #004F81
     padding-bottom: 20px;
     background: #f8f8f8;
     border-bottom: 2px solid #004F81;
+    border-top: 2px solid #EEEEEE;
     height: 350px;
+    border-top: 2px solid #EEEEEE;
 }
 
 .work:hover img {
@@ -583,20 +622,6 @@ footer {
 	height: 26px;
 }
 
-/* Flickr feed */
-.flickr-feed {
-    margin: 16px 0 0 0;
-}
-
-.flickr-feed a {
-	display: inline-block;
-	width: 54px;
-	margin: 0 4px 4px 0;
-}
-.flickr-feed a:hover { opacity: 0.7; }
-.flickr-feed a img { border: 2px solid #eaeaea; }
-
-
 .footer-border {
     margin-top: 30px;
     border-top: 1px dashed #ddd;
@@ -716,6 +741,7 @@ footer {
     padding-bottom: 15px;
     background: #f8f8f8;
     border-bottom: 2px solid #004F81;
+    border-top: 2px solid #EEEEEE;
 }
 
 .team-box:hover img {
@@ -751,6 +777,9 @@ footer {
 
 .team-social a { margin: 0 5px; font-size: 26px; }
 
+.journals ul {
+  text-align: left;
+}
 
 /* ----- CONTACT PAGE ----- */
 

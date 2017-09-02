@@ -108,12 +108,15 @@
                   under the advisory of <a href="http://www.dcc.ufmg.br/~tfn" target="_blank"> Dr. Thiago Ferreira Noronha</a>.
                 </p>
                 </div>
+              </div>
                 <div class="col-sm-12 work-title wow fadeIn">
                     <h2> Education </h2>
                 </div>
                 <div class="row">
                   <div class="col-sm-4 about-us-text wow fadeInLeftBig">
-	                    <img id="myself" src="assets/img/me.jpg">
+                      <a class="view-work" href="assets/img/me.jpg">
+                        <img id="myself" src="assets/img/me.jpg">
+                      </a>
 	                </div>
                   <div class="col-sm-8 about-us-text wow fadeInRight">
                     <div class="togglebox">
@@ -165,30 +168,38 @@
 	            <div class="row">
 	            	<div class="col-sm-3">
 		                <div class="team-box wow fadeInUp">
-		                    <img src="assets/img/team/1.jpg" alt="" data-at2x="assets/img/team/1.jpg">
-		                    <h3>Research Gate</h3>
-		                    <p>My profile at the most popular research network in the actuality. Contains a full list of my publications, my research interests and citations count.</p>
+		                    <a href="https://www.researchgate.net/profile/Iago_Carvalho" target="_blank">
+                          <img src="assets/img/about_networks/researchgate.png" alt="Research Gate logo" />
+		                      <h3>Research Gate</h3>
+                        </a>
+                        <p>My profile at the most popular research network in the actuality. Contains a full list of my publications, my research interests and citations count.</p>
 		                </div>
 	                </div>
 	                <div class="col-sm-3">
 		                <div class="team-box wow fadeInDown">
-		                    <img src="assets/img/team/2.jpg" alt="" data-at2x="assets/img/team/2.jpg">
-		                    <h3>Lattes curriculum</h3>
+		                    <a href="http://lattes.cnpq.br/9975041225831602" target="_blank">
+                          <img src="assets/img/about_networks/curriculolattes.png" alt="Lattes logo" />
+		                      <h3>Lattes curriculum</h3>
+                        </a>
 		                    <p>My full curriculum into Lattes database (in Portuguese). Contains a full list of my publications, presentations, technical works, and much more.</p>
 		                </div>
 	                </div>
 	                <div class="col-sm-3">
 		                <div class="team-box wow fadeInUp">
-		                    <img src="assets/img/team/3.jpg" alt="" data-at2x="assets/img/team/3.jpg">
+                      <a href="https://scholar.google.com.br/citations?user=md-lqLIAAAAJ&hl=en" target="_blank">
+                        <img src="assets/img/about_networks/scholar.png" alt="Google Scholar logo" />
 		                    <h3>Google Scholar</h3>
-		                    <p>My profile at Google Scholar database. Contains a list of my publications, a list of my colaborators, citations count, and links to my papers.</p>
+                      </a>
+                      <p>My profile at Google Scholar database. Contains a list of my publications, a list of my colaborators, citations count, and links to my papers.</p>
 		                </div>
 	                </div>
 	                <div class="col-sm-3">
 		                <div class="team-box wow fadeInDown">
-		                    <img src="assets/img/team/4.jpg" alt="" data-at2x="assets/img/team/4.jpg">
+                      <a href="https://github.com/iagoac" target="_blank">
+                        <img src="assets/img/about_networks/github.png" alt="Github logo">
 		                    <h3>Github</h3>
-		                    <p> <br /> My profile at Github. Contains the codes and algorithms of some of my papers, and other interesting repositories.</p>
+                      </a>
+                      <p> <br /> My profile at Github. Contains the codes and algorithms of some of my papers, and other interesting repositories.</p>
 		                </div>
 	                </div>
 	            </div>
@@ -208,18 +219,47 @@
 		                <h2> Other information </h2>
 		            </div>
 	            </div>
-              <!-- <div class="row">
-                <div class="col-sm-4 fadeInLeft">
-		                <h3> Journal reviwer </h3>
+              <div class="row">
+                <!-- Estes dois float: right são a maior gambiarra do site.
+                     Por algum motivo obscuro, se uma coluna está após a outra,
+                     o z-index não faz efeito. Tirar estes dois float: right
+                     vai fuder com o popup dos journals -->
+                <div class="col-sm-8 wow" style="visibility: visible;float: right;">
+                  <h4 class="wow fadeInLeft"> Useful links </h4>
+                    <a class="col-sm-4 wow fadeInDown" href="https://sites.google.com/site/lapoufmg/" target="_blank"> <img src="assets/img/lapo.png" alt="Operations Research Laboratory" /> </a>
+                    <a class="col-sm-4 wow fadeInUp" href="https://www.dcc.ufmg.br/" target="_blank"> <img src="assets/img/dcc.png" alt="Computer Science Department" /> </a>
+                    <a class="col-sm-4 wow fadeInDown" href="https://www.ufmg.br/" target="_blank"> <img src="assets/img/ufmg.png" alt="Federal University of Minas Gerais" /> </a>
+                </div>
+                <div class="col-sm-4 journals wow fadeInLeft" style="visibility: visible;float: right;">
+                    <h4> Journal reviewer </h4>
                     <ul>
-                      <li> European Journal of Operational Research </li>
-                      <li> IEEE Transactions on Evolutionary Computation </li>
-                      <li> Soft Applied Computing </li>
-                      <li> Swarm and Evolutionary Computation </li>
+                      <li class="popup">
+                        <a href="https://www.journals.elsevier.com/applied-soft-computing/" target="_blank" > Applied Soft Computing </a>
+                        <span class="popuptext">
+                          <img border="0" src="http://www.scimagojr.com/journal_img.php?id=18136" alt="SCImago Journal &amp; Country Rank"  />
+                        </span>
+                      </li>
+                      <li class="popup">
+                        <a href="https://www.journals.elsevier.com/european-journal-of-operational-research/" target="_blank"> European Journal of Operational Research </a>
+                        <div class="popuptext">
+                          <img border="0" src="http://www.scimagojr.com/journal_img.php?id=22489" alt="SCImago Journal &amp; Country Rank"  />
+                        </div>
+                      </li>
+                      <li class="popup">
+                        <a href="http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4235" target="_blank"> IEEE Transactions on Evolutionary Computation </a>
+                        <span class="popuptext">
+                          <img border="0" src="http://www.scimagojr.com/journal_img.php?id=25037" alt="SCImago Journal &amp; Country Rank"  />
+                        </span>
+                      </li>
+                      <li class="popup">
+                        <a href="www.journals.elsevier.com/swarm-and-evolutionary-computation/" target="_blank"> Swarm and Evolutionary Computation </a>
+                        <span class="popuptext">
+                          <img border="0" src="http://www.scimagojr.com/journal_img.php?id=19900192513" alt="SCImago Journal &amp; Country Rank"  />
+                        </span>
+                      </li>
                     </ul>
-		            </div>
-                <div class="col-sm-8 team-title wow fadeInLeft"> </div>
-              </div> -->
+                </div>
+              </div>
 	        </div>
         </div>
 
