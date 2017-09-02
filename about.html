@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="assets/css/form-elements.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/media-queries.css">
+        <link rel="stylesheet" href="accordion.css">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -89,8 +90,8 @@
                 <div class="row">
                     <div class="col-sm-12 wow fadeIn">
                         <i class="fa fa-user"></i>
-                        <h1>About Us /</h1>
-                        <p>Below you can find more information about our company</p>
+                        <h1>About me /</h1>
+                        <p>Below you can find more information about my carrer</p>
                     </div>
                 </div>
             </div>
@@ -100,35 +101,55 @@
         <div class="about-us-container">
         	<div class="container">
 	            <div class="row">
-	                <div class="col-sm-12 about-us-text wow fadeInLeft">
-	                    <h3>About Andia</h3>
-	                    <p>
-	                    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-	                    	Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper <span class="violet">suscipit lobortis</span>
-	                    	nisl ut aliquip ex ea commodo consequat. Lorem ipsum <strong>dolor sit amet</strong>, consectetur adipisicing elit,
-	                    	sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-	                    	suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-	                    	sed do <strong>eiusmod tempor</strong> incididunt.
-	                    </p>
-	                    <h3>Our Mission</h3>
-	                    <p>
-	                    	Lorem ipsum dolor sit amet, <span class="violet">consectetur adipisicing</span> elit, sed do eiusmod tempor incididunt
-	                    	ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-	                    	ex ea commodo consequat. Lorem ipsum dolor sit amet, <strong>consectetur adipisicing</strong> elit, sed do eiusmod
-	                    	<span class="violet">tempor incididunt</span> ut labore et. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-	                    	ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur
-	                    	adipisicing elit, sed do eiusmod tempor incididunt.
-	                    </p>
-	                    <h3>Why Choose Us</h3>
-	                    <p>
-	                    	Lorem ipsum dolor sit amet, <strong>consectetur adipisicing elit</strong>, sed do eiusmod tempor incididunt ut labore et.
-	                    	Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-	                    	consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-	                    	Ut wisi enim ad minim veniam, quis <span class="violet">nostrud exerci</span> tation ullamcorper suscipit lobortis
-	                    	nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	                    	tempor incididunt.
-	                    </p>
+                <div class="col-sm-12 about-us-text wow fadeInLeft">
+                <p>
+                  My name is <span class="violet">Iago Augusto Carvalho</span>. I have a <span class="violet">Bachelor's degree</span> and a <span class="violet">Master's degree</span> in <span class="violet">Computer Science</span>, respectively obtained in 2014 and 2016.
+                  Currently, I'm pursuing a <span class="violet">Doctor's degree</span> in Computer Science at the <a href="http://www.dcc.ufmg.br/pos" target="_blank"> UFMG Computer Science Department </a>,
+                  under the advisory of <a href="http://www.dcc.ufmg.br/~tfn" target="_blank"> Dr. Thiago Ferreira Noronha</a>.
+                </p>
+                </div>
+                <div class="col-sm-12 work-title wow fadeIn">
+                    <h2> Education </h2>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4 about-us-text wow fadeInLeftBig">
+	                    <img id="myself" src="assets/img/me.jpg">
 	                </div>
+                  <div class="col-sm-8 about-us-text wow fadeInRight">
+                    <div class="togglebox">
+                      <div>
+                        <input id="radio1" type="radio" name="toggle" checked="checked"/>
+                        <label for="radio1">Ph.D.</label>
+                        <div class="content">
+                          <p class="thesisTitle"> <span class="violet strong"> Title: </span> The Steiner Tree Problem under data uncertainty (provisory).</p>
+                          <p class="advisors"> <span class="violet strong"> Advisors: </span> Thiago F. Noronha and Christophe Duhamel.</p>
+                          <p class="institution"> <span class="violet strong"> Institution: </span> Federal University of Minas Gerais.</p>
+                          <p class="date"> <span class="violet strong"> Period: </span> March 2016 &nbsp; <i class="fa fa-tb fa-circle" aria-hidden="true"></i> <i class="fa fa-tb fa-long-arrow-right" aria-hidden="true"></i> <i class="fa fa-tb fa-long-arrow-right" aria-hidden="true"></i> <i class="fa fa-tb fa-circle-o-notch" aria-hidden="true"></i> </p>
+                        </div>
+                      </div>
+                      <div>
+                        <input id="radio2" type="radio" name="toggle"/>
+                        <label for="radio2">M.Sc.</label>
+                        <div class="content">
+                          <p class="thesisTitle"> <span class="violet strong"> Title: </span> The Robust Shortest Path Tree Problem: Models and Algorithms.</p>
+                          <p class="advisors"> <span class="violet strong"> Advisors: </span> Thiago F. Noronha and Luiz F. M. Vieira.</p>
+                          <p class="institution"> <span class="violet strong"> Institution: </span> Federal University of Minas Gerais.</p>
+                          <p class="date"> <span class="violet strong"> Period: </span> March 2014 &nbsp; <i class="fa fa-tb fa-circle" aria-hidden="true"></i> <i class="fa fa-tb fa-long-arrow-right" aria-hidden="true"></i> <i class="fa fa-tb fa-long-arrow-right" aria-hidden="true"></i> <i class="fa fa-tb fa-check-circle" aria-hidden="true"></i> &nbsp; March 2016 </p>
+                        </div>
+                      </div>
+                      <div>
+                        <input id="radio3" type="radio" name="toggle"/>
+                        <label for="radio3">B.Sc.</label>
+                        <div class="content">
+                          <p class="thesisTitle"> <span class="violet strong"> Title: </strong></span> Comparison of Evolutionary Algorithms for History Adjustment in Reservoir Engineering (in portuguese).</p>
+                          <p class="advisors"> <span class="violet strong"> Advisors: </span> Carolina R. Xavier.</p>
+                          <p class="institution"> <span class="violet strong"> Institution: </span> Federal University of São João del-Rei.</p>
+                          <p class="date"> <span class="violet strong"> Period: </span> March 2010 &nbsp; <i class="fa fa-tb fa-circle" aria-hidden="true"></i> <i class="fa fa-tb fa-long-arrow-right" aria-hidden="true"></i> <i class="fa fa-tb fa-long-arrow-right" aria-hidden="true"></i> <i class="fa fa-tb fa-long-arrow-right" aria-hidden="true"></i> <i class="fa fa-tb fa-long-arrow-right" aria-hidden="true"> </i> <i class="fa fa-tb fa-check-circle" aria-hidden="true"></i> &nbsp; February 2014</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 	            </div>
 	        </div>
         </div>
@@ -138,65 +159,69 @@
         	<div class="container">
 	            <div class="row">
 		            <div class="col-sm-12 team-title wow fadeIn">
-		                <h2>Meet Our Team</h2>
+		                <h2> Curriculum, networks and databases </h2>
 		            </div>
 	            </div>
 	            <div class="row">
 	            	<div class="col-sm-3">
 		                <div class="team-box wow fadeInUp">
 		                    <img src="assets/img/team/1.jpg" alt="" data-at2x="assets/img/team/1.jpg">
-		                    <h3>John Doe</h3>
-		                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
-		                    <div class="team-social">
-		                        <a href="#"><i class="fa fa-facebook"></i></a>
-		                        <a href="#"><i class="fa fa-twitter"></i></a>
-		                        <a href="#"><i class="fa fa-linkedin"></i></a>
-		                        <a href="#"><i class="fa fa-envelope"></i></a>
-		                    </div>
+		                    <h3>Research Gate</h3>
+		                    <p>My profile at the most popular research network in the actuality. Contains a full list of my publications, my research interests and citations count.</p>
 		                </div>
 	                </div>
 	                <div class="col-sm-3">
 		                <div class="team-box wow fadeInDown">
 		                    <img src="assets/img/team/2.jpg" alt="" data-at2x="assets/img/team/2.jpg">
-		                    <h3>Jane Doe</h3>
-		                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
-		                    <div class="team-social">
-		                        <a href="#"><i class="fa fa-facebook"></i></a>
-		                        <a href="#"><i class="fa fa-twitter"></i></a>
-		                        <a href="#"><i class="fa fa-linkedin"></i></a>
-		                        <a href="#"><i class="fa fa-envelope"></i></a>
-		                    </div>
+		                    <h3>Lattes curriculum</h3>
+		                    <p>My full curriculum into Lattes database (in Portuguese). Contains a full list of my publications, presentations, technical works, and much more.</p>
 		                </div>
 	                </div>
 	                <div class="col-sm-3">
 		                <div class="team-box wow fadeInUp">
 		                    <img src="assets/img/team/3.jpg" alt="" data-at2x="assets/img/team/3.jpg">
-		                    <h3>Tim Brown</h3>
-		                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
-		                    <div class="team-social">
-		                        <a href="#"><i class="fa fa-facebook"></i></a>
-		                        <a href="#"><i class="fa fa-twitter"></i></a>
-		                        <a href="#"><i class="fa fa-linkedin"></i></a>
-		                        <a href="#"><i class="fa fa-envelope"></i></a>
-		                    </div>
+		                    <h3>Google Scholar</h3>
+		                    <p>My profile at Google Scholar database. Contains a list of my publications, a list of my colaborators, citations count, and links to my papers.</p>
 		                </div>
 	                </div>
 	                <div class="col-sm-3">
 		                <div class="team-box wow fadeInDown">
 		                    <img src="assets/img/team/4.jpg" alt="" data-at2x="assets/img/team/4.jpg">
-		                    <h3>Sarah Red</h3>
-		                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
-		                    <div class="team-social">
-		                        <a href="#"><i class="fa fa-facebook"></i></a>
-		                        <a href="#"><i class="fa fa-twitter"></i></a>
-		                        <a href="#"><i class="fa fa-linkedin"></i></a>
-		                        <a href="#"><i class="fa fa-envelope"></i></a>
-		                    </div>
+		                    <h3>Github</h3>
+		                    <p> <br /> My profile at Github. Contains the codes and algorithms of some of my papers, and other interesting repositories.</p>
 		                </div>
 	                </div>
 	            </div>
+              <div class="row">
+                <div class="col-sm-12 about-us-text wow fadeInLeft">
+                  <p>
+                    A full list of my publications can also be found <a href="publications.html">here</a>.
+                  </p>
+                  <p>
+                    Besides, my research interests can are described <a href="research.html">here</a>.
+                  </p>
+                </div>
+              </div>
+
+              <div class="row">
+		            <div class="col-sm-12 team-title wow fadeIn">
+		                <h2> Other information </h2>
+		            </div>
+	            </div>
+              <!-- <div class="row">
+                <div class="col-sm-4 fadeInLeft">
+		                <h3> Journal reviwer </h3>
+                    <ul>
+                      <li> European Journal of Operational Research </li>
+                      <li> IEEE Transactions on Evolutionary Computation </li>
+                      <li> Soft Applied Computing </li>
+                      <li> Swarm and Evolutionary Computation </li>
+                    </ul>
+		            </div>
+                <div class="col-sm-8 team-title wow fadeInLeft"> </div>
+              </div> -->
 	        </div>
-        </div
+        </div>
 
         <!-- Footer -->
         <footer>
@@ -237,7 +262,7 @@
                           <p><i class="fa fa-map-marker"></i> Address: Presidente Antônio Carlos Avenue, 6627. Instituto de Ciências Exatas, Annex U, Room 3311. Belo Horizonte, MG, Brazil</p>
                           <p><i class="fa fa-phone"></i> Phone: +55 32 99974-7846</p>
                           <p><i class="fa fa-user"></i> Skype: augusto.iago</p>
-                          <p><i class="fa fa-envelope"></i> Email: <a href="">iagoac at dcc dot ufmg dot br</a></p>
+                          <p><i class="fa fa-envelope"></i> Email: <a href="">iagoac [at] dcc [dot] ufmg [dot] br</a></p>
                         </div>
                     </div>
                 </div>
@@ -247,18 +272,21 @@
                   </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-7 footer-copyright wow fadeIn">
+                    <div class="col-sm-8 footer-copyright wow fadeIn">
                         <p>Copyright 2017 Iago A. Carvalho - All rights reserved. Template powered by <a href="http://azmind.com">Azmind</a>.</p>
                     </div>
-                    <div class="col-sm-5 footer-social wow fadeIn">
-                        <a href="https://github.com/iagoac">
-                          <i class="fa fa-github"></i>
+                    <div class="col-sm-4 footer-social wow fadeIn">
+                        <a href="https://www.researchgate.net/profile/Iago_Carvalho">
+                          <i class="fa fa-rg">R<sup class="g">G</sup></i>
                         </a>
                         <a href="http://lattes.cnpq.br/9975041225831602">
                           <i class="fa fa-lattes">&nbsp;&nbsp;&nbsp;&nbsp;</i>
                         </a>
-                        <a href="https://www.researchgate.net/profile/Iago_Carvalho">
-                          <i class="fa fa-rg">R<div class="g">G</div></i>
+                        <a href="https://scholar.google.com.br/citations?user=md-lqLIAAAAJ&hl=en">
+                          <i class="fa fa-google"></i>
+                        </a>
+                        <a href="https://github.com/iagoac">
+                          <i class="fa fa-github"></i>
                         </a>
                     </div>
                 </div>

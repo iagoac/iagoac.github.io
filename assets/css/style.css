@@ -684,6 +684,13 @@ footer {
     font-size: 13px;
 }
 
+.about-us-container img#myself {
+    border: 2px dotted black;
+    padding: 5px;
+    border-radius: 500px;
+    background: white;
+}
+
 /***** Meet our team *****/
 
 .team-container {
