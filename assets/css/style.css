@@ -622,6 +622,28 @@ footer {
 	height: 26px;
 }
 
+.sitemap ul {
+  list-style: none;
+  font-size: 16px;
+  padding-left: 0px;
+}
+
+.sitemap ul .fa {
+  padding: 5px 10px;
+  width: 40px;
+  color: #004F81 !important;
+}
+
+.sitemap ul li a {
+  color: #888;
+  transition: all 0.5s linear;
+}
+
+.sitemap ul li a:hover {
+  color: #004F81;
+  transition: all 0.5s linear;
+}
+
 .footer-border {
     margin-top: 30px;
     border-top: 1px dashed #ddd;
@@ -956,8 +978,7 @@ footer {
 .portfolio-filters a:hover, .portfolio-filters a.active { color: #004F81; }
 
 .portfolio-box {
-	width: 255px;
-	margin: 40px 15px 0 15px;
+	/*margin: 40px 15px 0 15px;*/
 }
 
 .portfolio-box img {
@@ -968,8 +989,8 @@ footer {
 
 .portfolio-box-container {
 	position: relative;
-	background: #f8f8f8;
-    border-bottom: 2px solid #004F81;
+  border-bottom: 1px solid #004F81;
+  border-top: 1px solid #004F81;
 }
 
 .portfolio-box-container:hover {
@@ -994,11 +1015,12 @@ footer {
 }
 
 .portfolio-box-text {
-	padding: 0 15px 20px 15px;
+	padding: 5px;
+  text-align: left;
 }
 
 .portfolio-box-text h3 {
-    margin-top: 20px;
+    margin-top: 0px;
     font-family: 'Droid Sans', sans-serif;
     font-size: 14px;
     color: #5d5d5d;
@@ -1007,7 +1029,31 @@ footer {
     text-shadow: 0 1px 0 rgba(255,255,255,.7);
 }
 
+.portfolio-box-text h3:before {
+    content: "Title: ";
+    color: #004F81;
+}
+
+.portfolio-box-text p.authors:before {
+    content: "Authors: ";
+    color: #004F81;
+}
+
+.portfolio-box-text p.conference:before {
+    content: "Conference: ";
+    color: #004F81;
+}
+
+.portfolio-box-text p.journal:before {
+    content: "Journal: ";
+    color: #004F81;
+}
+
+.portfolio-box-text p.year:before {
+    content: "Year: ";
+    color: #004F81;
+}
+
 .portfolio-box-text p {
-    line-height: 24px;
-    font-style: italic;
+    margin: 0px;
 }
