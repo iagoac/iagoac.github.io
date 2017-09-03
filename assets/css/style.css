@@ -915,6 +915,15 @@ footer {
     font-size: 13px;
 }
 
+.border-bottom {
+    border-bottom: 1px dashed #CCC;
+}
+
+.services-full-width-container img.research {
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
 /***** Call to action *****/
 
 .call-to-action-container {
