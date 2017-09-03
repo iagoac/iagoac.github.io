@@ -1,5 +1,5 @@
 
-jQuery(document).ready(function() {	
+jQuery(document).ready(function() {
 	/*
 	    Wow
 	*/
@@ -152,12 +152,6 @@ jQuery(window).load(function() {
 	/*
 	    Portfolio
 	*/
-	$('.portfolio-masonry').masonry({
-		columnWidth: '.portfolio-box',
-		itemSelector: '.portfolio-box',
-		transitionDuration: '0.5s'
-	});
-
 	$('.portfolio-filters a').on('click', function(e){
 		e.preventDefault();
 		if(!$(this).hasClass('active')) {
@@ -169,12 +163,12 @@ jQuery(window).load(function() {
 	    		$('.portfolio-box:not(.' + clicked_filter + ')').removeClass('portfolio-box');
 	    		$('.' + clicked_filter).addClass('portfolio-box');
 	    		$('.' + clicked_filter).css('display', 'block');
-	    		$('.portfolio-masonry').masonry();
 	    	}
 	    	else {
-	    		$('.portfolio-masonry > div').addClass('portfolio-box');
-	    		$('.portfolio-masonry > div').css('display', 'block');
-	    		$('.portfolio-masonry').masonry();
+					$('.journal-paper').addClass('portfolio-box');
+					$('.conference-paper').addClass('portfolio-box');
+					$('.other-paper').addClass('portfolio-box');
+					$('.portfolio-box').css('display', 'block');
 	    	}
 		}
 	});
