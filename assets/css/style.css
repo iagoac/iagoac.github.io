@@ -581,7 +581,9 @@ footer {
     margin: 20px auto 0 auto;
     padding-bottom: 10px;
     background: #f8f8f8 url(../img/graph.png);
-    -moz-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset; -webkit-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset; box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset;
+    -moz-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset, 0 0 3px black;
+    -webkit-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset, 0 0 3px black;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset, 0 0 3px black;
 }
 
 .footer-box {
