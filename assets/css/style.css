@@ -1079,6 +1079,25 @@ footer {
     color: #004F81;
 }
 
+.portfolio-box-text p.year span {
+  margin-left: 10px;
+}
+  
+.portfolio-box-text p.year .bibtex:before {
+    content: "BIBTEX";
+    color: #004F81;
+}
+
+.portfolio-box-text p.year .abstract:before {
+    content: "ABSTRACT";
+    color: #004F81;
+}
+
+.portfolio-box-text p.year .pdf:before {
+    content: "PDF";
+    color: #004F81;
+}
+
 .portfolio-box-text p {
     margin: 0px;
 }

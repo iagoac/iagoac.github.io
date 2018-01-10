@@ -203,4 +203,8 @@ jQuery(window).load(function() {
 		}
 	});
 
+  $('.portfolio-box-text p.year .abstract').on('click', function(e) {
+    
+  });
+
 });
