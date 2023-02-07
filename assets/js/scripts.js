@@ -1,5 +1,3 @@
-document.getElementById("year").innerHTML = new Date().getFullYear();
-
 jQuery(document).ready(function() {
 	/*
 	    Wow
