@@ -26,7 +26,7 @@ jobs:
         run: cd src && npm ci # 'ci' is safer than 'install' for CI environments
 
       - name: Build Project
-        run: cd src && npm run build --if-present
+        run: cd src && npm run build
 
       - name: Deploy to gh-pages branch
         uses: JamesIves/github-pages-deploy-action@v4
