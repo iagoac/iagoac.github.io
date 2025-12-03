@@ -5,7 +5,9 @@ on:
     branches: ["master"] # Trigger on pushes to master
 
 permissions:
-  contents: write # Required to push to the gh-pages branch
+  contents: read
+  pages: write
+  id-token: write # Grant the id-token: write permission
 
 jobs:
   build:
