@@ -66,7 +66,11 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border flex flex-col items-end">
+          <nav className={cn(
+            "md:hidden py-4 border-t border-border flex flex-col items-end",
+            isScrolled ? "bg-transparent" : "bg-background/80 backdrop-blur-md"
+            )}
+            >
             {navItems.map((item) => (
               <a
                 key={item.name}
