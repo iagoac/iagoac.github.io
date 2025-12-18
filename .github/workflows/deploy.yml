@@ -44,5 +44,6 @@ jobs:
 
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment  # Add this ID to enable output referencing
         uses: actions/deploy-pages@v4
     
