@@ -11,6 +11,10 @@ export function Hero() {
             Computer science researcher and professor
           </div>
 
+          <div className="rounded-full border-4 border-muted overflow-hidden mx-auto shadow-lg shadow-inner">
+            <img src="/iago.jpg" alt="Dr. Iago Augusto Carvalho" className="w-full h-full object-cover" />
+          </div>
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground text-balance">Dr. Iago Augusto Carvalho</h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl text-pretty leading-relaxed">
