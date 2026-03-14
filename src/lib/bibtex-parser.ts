@@ -80,7 +80,7 @@ export function bibtexToPublication(entry: BibTeXEntry): Publication {
   authors = authors.replace(/ and /g, ", ")
 
   // Extract venue
-  const venue = fields.booktitle || fields.journal || fields.publisher || "Unknown Venue"
+  const venue = (fields.booktitle || fields.journal || fields.publisher || "Unknown Venue").replaceAll("\\", "")
 
   // Extract DOI
   const doi = fields.doi
