@@ -63,12 +63,12 @@ export function Publications() {
                       <span className="px-2 py-1 rounded-md bg-primary/10 text-primary text-xs font-medium">
                         {pub.type}
                       </span>
-                      <span className="text-muted-foreground italic">{pub.venue}</span>
+                      <span className="text-muted-foreground italic">{pub.venue.replace(/\\/g, "")}</span>
                     </div>
                     {pub.doi && (
                       <>
-                      {/* <span className="hidden sm:inline text-border">•</span> */}
-                      <span className="text-muted-foreground font-mono text-xs">DOI: {pub.doi}</span>
+                        {/* <span className="hidden sm:inline text-border">•</span> */}
+                        <span className="text-muted-foreground font-mono text-xs">DOI: {pub.doi}</span>
                       </>
                     )}
                   </div>
