@@ -10,14 +10,14 @@ export function Teaching() {
       code: "DCE797",
       name: "Project and analysis of algorithms",
       level: "Undergraduate",
-      semester: "2025-2",
+      semester: "2026-1",
       link: "https://github.com/iagoac/dce797",
     },
     {
       code: "EAB067",
       name: "Machine learning",
       level: "Graduate",
-      semester: "2025-2",
+      semester: "2026-1",
       link: "https://github.com/iagoac/eab067",
     },
     {
@@ -29,12 +29,12 @@ export function Teaching() {
     },
     {
       code: "DCE792",
-      name: "Laboratory of data Structures and algorithms",
+      name: "Laboratory of data structures and algorithms",
       level: "Undergraduate",
       semester: "2025-1",
       link: "https://github.com/iagoac/dce792",
     },
-    
+
   ]
 
   const stats = [
