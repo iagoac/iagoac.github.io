@@ -15,19 +15,19 @@ This repository contains the source code for my personal and professional websit
 
 The project leverages modern JavaScript tooling and a static deployment model.
 
-| Category | Technology | Purpose |
-| :--- | :--- | :--- |
-| **Language** | TypeScript | Ensures type safety and scalability. |
-| **Runtime** | Node.js | Used exclusively for build tooling and dependency management. |
-| **Styling** | Tailwind CSS | Provides modern, responsive styling. |
+| Category     | Technology   | Purpose                                                       |
+| :----------- | :----------- | :------------------------------------------------------------ |
+| **Language** | TypeScript   | Ensures type safety and scalability.                          |
+| **Runtime**  | Node.js      | Used exclusively for build tooling and dependency management. |
+| **Styling**  | Tailwind CSS | Provides modern, responsive styling.                          |
 
 ## 🏗️ Project StructureDirectory
 
-| Directory/File | Purpose |
-| :--- | :--- |
-| **`src/`** | **Source Code.** Contains all the TypeScript, HTML templates, and styles. |
-| **`.github/workflows/`** | Contains the automated CI/CD pipeline script (`deploy.yml`). |
-| **`src/package.json`** | Project metadata, dependencies, and build scripts. |
+| Directory/File           | Purpose                                                                   |
+| :----------------------- | :------------------------------------------------------------------------ |
+| **`src/`**               | **Source Code.** Contains all the TypeScript, HTML templates, and styles. |
+| **`.github/workflows/`** | Contains the automated CI/CD pipeline script (`deploy.yml`).              |
+| **`src/package.json`**   | Project metadata, dependencies, and build scripts.                        |
 
 ## 🚀 Getting Started (Local Development)
 
@@ -79,7 +79,7 @@ Deployment: The official deploy-pages action publishes the artifact to GitHub Pa
 ## ✉️ Contact and License
 
 ### Contact
-For professional inquiries, academic collaboration, or questions regarding the repository, please reach out via email: iago.carvalho@unifal-mg.edu.br. Alternatively, you can schedule a meeting using my [Calendly](calendly.com/iagoac)
+For professional inquiries, academic collaboration, or questions regarding the repository, please reach out via email: iago.carvalho@unifal-mg.edu.br. Alternatively, you can schedule a meeting using my [Google Agenda](https://calendar.app.google/QHUECcVm7A7CbM6aA)
 
 ### License
 This project is licensed under the Ununlicense. For full details, please refer to the ```LICENSE``` file in the repository root.
