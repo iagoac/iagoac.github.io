@@ -113,14 +113,15 @@ export function Contact() {
             <h3 className="text-xl font-semibold mb-2">Office Hours</h3>
             <p className="mb-4 opacity-90">by appointment</p>
             <Button variant="secondary" size="lg" asChild>
-              <a href="https://calendly.com/iagoac" target="_blank" rel="noopener noreferrer">
-                <Mail className="h-4 w-4 mr-2" />
-                Schedule a meeting
-              </a>
-            </Button>
-          </CardContent>
-        </Card>
-      </div>
-    </section>
+              {/* <a href="https://calendly.com/iagoac" target="_blank" rel="noopener noreferrer"> */}
+              <a href="https://calendar.app.google/QHUECcVm7A7CbM6aA" target="_blank" rel="noopener noreferrer"></a>
+              <Mail className="h-4 w-4 mr-2" />
+              Schedule a meeting
+            </a>
+          </Button>
+        </CardContent>
+      </Card>
+    </div>
+    </section >
   )
 }
