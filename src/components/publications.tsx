@@ -1,9 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { FileText, ExternalLink, Calendar } from "lucide-react"
+import { FileText, ExternalLink, Calendar, BookMarked } from "lucide-react"
 import { parseBibTeX, bibtexToPublication, type Publication } from "@/lib/bibtex-parser"
 
 export function Publications() {
@@ -34,62 +33,65 @@ export function Publications() {
   }
 
   return (
-    <section id="publications" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
-            <FileText className="h-4 w-4" />
+    <section id="publications" className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8">
+      {/* Decorative background element */}
+      <div className="absolute left-0 top-1/2 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none -z-10 -translate-y-1/2" />
+
+      <div className="container mx-auto max-w-5xl relative z-10">
+        <div className="text-center mb-16 md:mb-24">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/20 bg-purple-500/10 text-purple-400 text-sm font-medium mb-6 backdrop-blur-md">
+            <BookMarked className="h-4 w-4" />
             Academic Work
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">Publications</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Selected publications from my research work
+          <h2 className="heading-font text-4xl md:text-5xl font-bold mb-6 text-balance">
+            <span className="text-gradient">Selected</span> Publications
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
+            Highlighting recent and significant contributions to the field
           </p>
         </div>
 
         <div className="space-y-6">
           {publications.map((pub, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="flex flex-col md:flex-row md:items-start gap-4">
-                  <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground flex-shrink-0">
-                    <Calendar className="h-4 w-4" />
-                    {pub.year}
+            <div key={index} className="group relative">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-purple-500/50 rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-500" />
+              <div className="relative glass-card p-6 md:p-8 rounded-2xl flex flex-col md:flex-row md:items-start gap-6 border-l-4 border-l-primary hover:border-l-purple-500 transition-colors">
+                <div className="flex items-center gap-2 text-sm font-medium text-purple-400 flex-shrink-0 md:mt-1 bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">
+                  <Calendar className="h-4 w-4" />
+                  {pub.year}
+                </div>
+                <div className="flex-1 space-y-3">
+                  <h3 className="text-xl font-bold text-foreground text-balance group-hover:text-primary transition-colors">{pub.title}</h3>
+                  <p className="text-base text-muted-foreground/90 font-light leading-relaxed">{pub.authors}</p>
+                  <div className="flex flex-wrap items-center gap-3 text-sm pt-2">
+                    <span className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-medium">
+                      {pub.type}
+                    </span>
+                    <span className="text-muted-foreground italic font-light">{pub.venue}</span>
                   </div>
-                  <div className="flex-1 space-y-2">
-                    <h3 className="text-lg font-semibold text-foreground text-balance">{pub.title}</h3>
-                    <p className="text-sm text-muted-foreground">{pub.authors}</p>
-                    <div className="flex flex-wrap items-center gap-3 text-sm">
-                      <span className="px-2 py-1 rounded-md bg-primary/10 text-primary text-xs font-medium">
-                        {pub.type}
-                      </span>
-                      <span className="text-muted-foreground italic">{pub.venue}</span>
+                  {pub.doi && (
+                    <div className="text-muted-foreground/70 font-mono text-xs pt-1">
+                      DOI: <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" className="hover:text-primary hover:underline">{pub.doi}</a>
                     </div>
-                    {pub.doi && (
-                      <>
-                        {/* <span className="hidden sm:inline text-border">•</span> */}
-                        <span className="text-muted-foreground font-mono text-xs">DOI: {pub.doi}</span>
-                      </>
-                    )}
-                  </div>
-                  {pub.link && (
-                    <Button variant="outline" size="sm" asChild className="flex-shrink-0 bg-transparent">
-                      <a href={pub.link} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        View
-                      </a>
-                    </Button>
                   )}
                 </div>
-              </CardContent>
-            </Card>
+                {pub.link && (
+                  <Button variant="outline" size="sm" asChild className="flex-shrink-0 bg-transparent border-primary/30 hover:bg-primary/10 rounded-full">
+                    <a href={pub.link} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Read Paper
+                    </a>
+                  </Button>
+                )}
+              </div>
+            </div>
           ))}
         </div>
 
-        <div className="text-center mt-8">
-          <Button variant="outline" size="lg" asChild>
+        <div className="text-center mt-12 md:mt-16">
+          <Button variant="outline" size="lg" className="rounded-full border-primary/30 hover:bg-primary/10 glass px-8" asChild>
             <a href="/publications">
-              View Full Publication List
+              View All Publications
               <ExternalLink className="h-4 w-4 ml-2" />
             </a>
           </Button>

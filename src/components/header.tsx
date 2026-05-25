@@ -28,25 +28,25 @@ export function Header() {
   ]
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm" : "bg-transparent",
-      )}
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="/" className="font-semibold text-lg text-foreground hover:text-primary transition-colors">
-            Iago A. Carvalho, PhD
+    <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 animate-in slide-in-from-top-8 duration-500">
+      <header
+        className={cn(
+          "w-full max-w-4xl rounded-full transition-all duration-300",
+          isScrolled ? "glass-card py-2 px-6 shadow-xl" : "bg-background/20 backdrop-blur-sm border border-transparent py-3 px-6"
+        )}
+      >
+        <div className="flex items-center justify-between">
+          <a href="/" className="font-semibold text-lg text-foreground hover:text-primary transition-colors heading-font">
+            Iago A. Carvalho<span className="text-primary hidden sm:inline">, PhD</span>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors hover:scale-105 transform inline-block"
               >
                 {item.name}
               </a>
@@ -57,7 +57,7 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden rounded-full hover:bg-primary/20"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -66,24 +66,22 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className={cn(
-            "md:hidden py-4 border-t border-border flex flex-col items-end",
-            isScrolled ? "bg-transparent" : "bg-background/80 backdrop-blur-md"
-            )}
-            >
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
-          </nav>
+          <div className="md:hidden absolute top-full left-0 right-0 mt-4 px-2">
+            <nav className="glass-card rounded-2xl py-4 flex flex-col items-center space-y-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="block text-sm font-medium text-foreground hover:text-primary transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ))}
+            </nav>
+          </div>
         )}
-      </div>
-    </header>
+      </header>
+    </div>
   )
 }

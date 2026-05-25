@@ -56,71 +56,86 @@ export function Contact() {
   ]
 
   return (
-    <section id="contact" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
-      <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">Get in Touch</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+    <section id="contact" className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Decorative background element */}
+      <div className="absolute right-0 top-1/2 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[100px] pointer-events-none -z-10 -translate-y-1/2 translate-x-1/3" />
+
+      <div className="container mx-auto max-w-4xl relative z-10">
+        <div className="text-center mb-16 md:mb-24">
+          <h2 className="heading-font text-4xl md:text-5xl font-bold mb-6 text-balance">
+            Get in <span className="text-gradient">Touch</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
             Feel free to reach out for collaborations, research inquiries, or student opportunities
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <Card>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold text-foreground mb-6">Contact Information</h3>
-              <div className="space-y-4">
+          <div className="group relative">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/30 to-blue-500/30 rounded-2xl blur opacity-0 group-hover:opacity-40 transition duration-500" />
+            <div className="relative glass-card h-full p-8 rounded-2xl">
+              <h3 className="heading-font text-2xl font-bold text-foreground mb-8 flex items-center">
+                <span className="w-6 h-1 bg-primary mr-4 rounded-full"></span>
+                Contact Information
+              </h3>
+              <div className="space-y-6">
                 {contactInfo.map((item, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div key={index} className="flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors">
+                    <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-primary/20 to-blue-500/20 border border-primary/20 flex items-center justify-center flex-shrink-0 shadow-inner">
                       <item.icon className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <div className="text-sm font-medium text-muted-foreground mb-1">{item.label}</div>
+                      <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-1">{item.label}</div>
                       {item.link ? (
-                        <a href={item.link} className="text-foreground hover:text-primary transition-colors">
+                        <a href={item.link} className="text-foreground hover:text-primary transition-colors text-base font-medium">
                           {item.value}
                         </a>
                       ) : (
-                        <div className="text-foreground">{item.value}</div>
+                        <div className="text-foreground text-base font-medium">{item.value}</div>
                       )}
                     </div>
                   </div>
                 ))}
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
-          <Card>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold text-foreground mb-6">Academic Profiles</h3>
+          <div className="group relative">
+            <div className="absolute -inset-0.5 bg-gradient-to-l from-primary/30 to-purple-500/30 rounded-2xl blur opacity-0 group-hover:opacity-40 transition duration-500" />
+            <div className="relative glass-card h-full p-8 rounded-2xl">
+              <h3 className="heading-font text-2xl font-bold text-foreground mb-8 flex items-center">
+                <span className="w-6 h-1 bg-purple-500 mr-4 rounded-full"></span>
+                Academic Profiles
+              </h3>
               <div className="grid grid-cols-2 gap-4">
                 {socialLinks.map((link, index) => (
-                  <Button key={index} variant="outline" asChild className="h-auto py-4 flex-col gap-2 bg-transparent">
+                  <Button key={index} variant="outline" asChild className="h-auto py-6 flex-col gap-3 bg-background/30 backdrop-blur-sm border-primary/20 hover:bg-primary/10 hover:border-primary/50 transition-all group/btn rounded-xl">
                     <a href={link.url} target="_blank" rel="noopener noreferrer">
-                      <link.icon className="h-5 w-5" />
-                      <span className="text-sm">{link.label}</span>
+                      <link.icon className="h-6 w-6 text-muted-foreground group-hover/btn:text-primary transition-colors" />
+                      <span className="text-sm font-medium">{link.label}</span>
                     </a>
                   </Button>
                 ))}
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
 
-        <Card className="mt-8 bg-primary text-primary-foreground">
-          <CardContent className="p-6 md:p-8 text-center">
-            <h3 className="text-xl font-semibold mb-2">Office Hours</h3>
-            <p className="mb-4 opacity-90">by appointment</p>
-            <Button variant="secondary" size="lg" asChild>
+        <div className="mt-12 relative group">
+          <div className="absolute -inset-1 bg-gradient-to-r from-primary via-blue-500 to-purple-600 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500" />
+          <div className="relative glass-card p-10 md:p-12 text-center rounded-3xl border border-white/10 overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/20 to-purple-600/20 pointer-events-none" />
+            <h3 className="heading-font text-3xl font-bold mb-4 text-foreground relative z-10">Office Hours</h3>
+            <p className="mb-8 text-lg text-muted-foreground font-light relative z-10">Available by appointment for detailed discussions.</p>
+            <Button size="lg" className="h-14 px-8 text-base rounded-full shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all relative z-10 hover:scale-105" asChild>
               <a href="https://calendar.app.google/QHUECcVm7A7CbM6aA" target="_blank" rel="noopener noreferrer">
-                <Mail className="h-4 w-4 mr-2" />
+                <Mail className="h-5 w-5 mr-3 animate-pulse" />
                 Schedule a meeting
               </a>
             </Button>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </div>
-    </section >
+    </section>
   )
 }

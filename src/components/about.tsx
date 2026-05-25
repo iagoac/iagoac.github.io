@@ -26,20 +26,29 @@ export function About() {
   ]
 
   return (
-    <section id="about" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">About Me</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+    <section id="about" className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Decorative background flare */}
+      <div className="absolute right-0 top-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none -z-10" />
+
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <div className="text-center mb-16 md:mb-24">
+          <h2 className="heading-font text-4xl md:text-5xl font-bold mb-6 text-balance">
+            <span className="text-gradient">About</span> Me
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
             Passionate educator and researcher dedicated to advancing computer science
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Card>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Background</h3>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="group relative">
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-500" />
+            <div className="relative glass-card h-full p-8 rounded-2xl">
+              <h3 className="heading-font text-2xl font-bold text-foreground mb-6 flex items-center">
+                <span className="w-8 h-1 bg-primary mr-4 rounded-full"></span>
+                Background
+              </h3>
+              <div className="space-y-4 text-muted-foreground/90 leading-relaxed text-lg font-light">
                 <p>
                   I am a Computer Science Professor at Universidade Federal de Alfenas (UNIFAL-MG), where I teach both
                   undergraduate and graduate courses.
@@ -52,43 +61,48 @@ export function About() {
                   involved in research and teaching since then.
                 </p>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
-          <Card>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Education</h3>
-              <div className="space-y-4">
-                <div className="border-l-2 border-primary pl-4">
-                  <div className="font-semibold text-foreground">Ph.D. in Computer Science</div>
-                  <div className="text-sm text-muted-foreground">Universidade Federal de Minas Gerais, 2020</div>
-                  <div className="text-sm text-muted-foreground mt-1">Thesis: The Minmax regret 0-1 Integer Linear Programming Problem under Interval Uncertainty: Complexity and Heuristics</div>
+          <div className="group relative">
+            <div className="absolute -inset-0.5 bg-gradient-to-l from-primary to-purple-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-500" />
+            <div className="relative glass-card h-full p-8 rounded-2xl">
+              <h3 className="heading-font text-2xl font-bold text-foreground mb-6 flex items-center">
+                <span className="w-8 h-1 bg-purple-500 mr-4 rounded-full"></span>
+                Education
+              </h3>
+              <div className="space-y-6">
+                <div className="relative border-l-2 border-primary/30 pl-6 hover:border-primary transition-colors">
+                  <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-1.5 shadow-[0_0_10px_rgba(var(--primary),0.8)]" />
+                  <div className="font-semibold text-lg text-foreground">Ph.D. in Computer Science</div>
+                  <div className="text-sm text-primary font-medium mb-1">Universidade Federal de Minas Gerais, 2020</div>
+                  <div className="text-sm text-muted-foreground">Thesis: The Minmax regret 0-1 Integer Linear Programming Problem under Interval Uncertainty: Complexity and Heuristics</div>
                 </div>
-                <div className="border-l-2 border-primary pl-4">
-                  <div className="font-semibold text-foreground">M.Sc. in Computer Science</div>
-                  <div className="text-sm text-muted-foreground">Universidade Federal de Minas Gerais, 2016</div>
-                  <div className="text-sm text-muted-foreground mt-1">Thesis: The Robust Shortest Path Tree: formulations and algorithms</div>
+                <div className="relative border-l-2 border-primary/30 pl-6 hover:border-primary transition-colors">
+                  <div className="absolute w-3 h-3 bg-primary/50 rounded-full -left-[7px] top-1.5" />
+                  <div className="font-semibold text-lg text-foreground">M.Sc. in Computer Science</div>
+                  <div className="text-sm text-primary font-medium mb-1">Universidade Federal de Minas Gerais, 2016</div>
+                  <div className="text-sm text-muted-foreground">Thesis: The Robust Shortest Path Tree: formulations and algorithms</div>
                 </div>
-                <div className="border-l-2 border-primary pl-4">
-                  <div className="font-semibold text-foreground">B.Sc. in Computer Science</div>
-                  <div className="text-sm text-muted-foreground">Universidade Federal de São João del Rei, 2014</div>
+                <div className="relative border-l-2 border-primary/30 pl-6 hover:border-primary transition-colors">
+                  <div className="absolute w-3 h-3 bg-primary/50 rounded-full -left-[7px] top-1.5" />
+                  <div className="font-semibold text-lg text-foreground">B.Sc. in Computer Science</div>
+                  <div className="text-sm text-primary font-medium mb-1">Universidade Federal de São João del Rei, 2014</div>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.map((item, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6 flex flex-col items-center text-center">
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <item.icon className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-              </CardContent>
-            </Card>
+            <div key={index} className="glass-card p-6 rounded-2xl flex flex-col items-center text-center group hover:-translate-y-2 transition-all duration-300">
+              <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-primary/20 to-purple-500/20 flex items-center justify-center mb-6 border border-primary/20 group-hover:scale-110 transition-transform duration-300 shadow-inner">
+                <item.icon className="h-8 w-8 text-primary group-hover:text-purple-400 transition-colors" />
+              </div>
+              <h3 className="font-semibold text-lg text-foreground mb-3">{item.title}</h3>
+              <p className="text-sm text-muted-foreground/80 leading-relaxed font-light">{item.description}</p>
+            </div>
           ))}
         </div>
       </div>
