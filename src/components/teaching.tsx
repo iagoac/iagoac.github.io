@@ -5,32 +5,32 @@ import { BookOpen, GraduationCap, Users, Award, ExternalLink } from "lucide-reac
 export function Teaching() {
   const courses = [
     {
+      code: "DCE770",
+      name: "Heuristics and Metaheuristics",
+      level: "Undergraduate",
+      semester: "2026-2",
+      link: "https://github.com/iagoac/dce770",
+    },
+    {
+      code: "DCE792",
+      name: "Laboratory of Data Structures and Algorithms",
+      level: "Undergraduate",
+      semester: "2026-2",
+      link: "https://github.com/iagoac/dce792",
+    },
+    {
       code: "DCE797",
-      name: "Project and analysis of algorithms",
+      name: "Project and Analysis of Algorithms",
       level: "Undergraduate",
       semester: "2026-1",
       link: "https://github.com/iagoac/dce797",
     },
     {
       code: "EAB067",
-      name: "Machine learning",
+      name: "Machine Learning",
       level: "Graduate",
       semester: "2026-1",
       link: "https://github.com/iagoac/eab067",
-    },
-    {
-      code: "DCE770",
-      name: "Heuristics and metaheuristics",
-      level: "Undergraduate",
-      semester: "2025-1",
-      link: "https://github.com/iagoac/dce770",
-    },
-    {
-      code: "DCE792",
-      name: "Laboratory of data structures and algorithms",
-      level: "Undergraduate",
-      semester: "2025-1",
-      link: "https://github.com/iagoac/dce792",
     },
   ]
 
