@@ -33,16 +33,9 @@ export function Publications() {
   }
 
   return (
-    <section id="publications" className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8">
-      {/* Decorative background element */}
-      <div className="absolute left-0 top-1/2 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none -z-10 -translate-y-1/2" />
-
+    <section id="publications" className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-5xl relative z-10">
         <div className="text-center mb-16 md:mb-24">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/20 bg-purple-500/10 text-purple-400 text-sm font-medium mb-6 backdrop-blur-md">
-            <BookMarked className="h-4 w-4" />
-            Academic Work
-          </div>
           <h2 className="heading-font text-4xl md:text-5xl font-bold mb-6 text-balance">
             <span className="text-gradient">Selected</span> Publications
           </h2>
@@ -54,9 +47,8 @@ export function Publications() {
         <div className="space-y-6">
           {publications.map((pub, index) => (
             <div key={index} className="group relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-purple-500/50 rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-500" />
-              <div className="relative glass-card p-6 md:p-8 rounded-2xl flex flex-col md:flex-row md:items-start gap-6 border-l-4 border-l-primary hover:border-l-purple-500 transition-colors">
-                <div className="flex items-center gap-2 text-sm font-medium text-purple-400 flex-shrink-0 md:mt-1 bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">
+              <div className="relative glass-card p-6 md:p-8 rounded-2xl flex flex-col md:flex-row md:items-start gap-6 border-l-4 border-l-primary hover:border-l-blue-500 transition-colors">
+                <div className="flex items-center gap-2 text-sm font-medium text-blue-600 flex-shrink-0 md:mt-1 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
                   <Calendar className="h-4 w-4" />
                   {pub.year}
                 </div>

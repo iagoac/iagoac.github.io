@@ -26,10 +26,7 @@ export function About() {
   ]
 
   return (
-    <section id="about" className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Decorative background flare */}
-      <div className="absolute right-0 top-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none -z-10" />
-
+    <section id="about" className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16 md:mb-24">
           <h2 className="heading-font text-4xl md:text-5xl font-bold mb-6 text-balance">
@@ -42,10 +39,9 @@ export function About() {
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="group relative">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-500" />
             <div className="relative glass-card h-full p-8 rounded-2xl">
               <h3 className="heading-font text-2xl font-bold text-foreground mb-6 flex items-center">
-                <span className="w-8 h-1 bg-primary mr-4 rounded-full"></span>
+                <span className="w-8 h-1 bg-gradient-to-r from-emerald-600 to-primary mr-4 rounded-full"></span>
                 Background
               </h3>
               <div className="space-y-4 text-muted-foreground/90 leading-relaxed text-lg font-light">
@@ -65,10 +61,9 @@ export function About() {
           </div>
 
           <div className="group relative">
-            <div className="absolute -inset-0.5 bg-gradient-to-l from-primary to-purple-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-500" />
             <div className="relative glass-card h-full p-8 rounded-2xl">
               <h3 className="heading-font text-2xl font-bold text-foreground mb-6 flex items-center">
-                <span className="w-8 h-1 bg-purple-500 mr-4 rounded-full"></span>
+                <span className="w-8 h-1 bg-gradient-to-r from-emerald-600 to-primary mr-4 rounded-full"></span>
                 Education
               </h3>
               <div className="space-y-6">
@@ -97,8 +92,8 @@ export function About() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.map((item, index) => (
             <div key={index} className="glass-card p-6 rounded-2xl flex flex-col items-center text-center group hover:-translate-y-2 transition-all duration-300">
-              <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-primary/20 to-purple-500/20 flex items-center justify-center mb-6 border border-primary/20 group-hover:scale-110 transition-transform duration-300 shadow-inner">
-                <item.icon className="h-8 w-8 text-primary group-hover:text-purple-400 transition-colors" />
+              <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-primary/20 to-emerald-600/20 flex items-center justify-center mb-6 border border-primary/20 group-hover:scale-110 transition-transform duration-300 shadow-inner">
+                <item.icon className="h-8 w-8 text-primary group-hover:text-emerald-700 transition-colors" />
               </div>
               <h3 className="font-semibold text-lg text-foreground mb-3">{item.title}</h3>
               <p className="text-sm text-muted-foreground/80 leading-relaxed font-light">{item.description}</p>

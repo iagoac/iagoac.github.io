@@ -102,40 +102,50 @@ export default function PublicationsPage() {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-primary/5 to-transparent">
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
-                <FileText className="h-4 w-4" />
-                Academic Publications
-              </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
-                Full Publication List
+                Full <span className="text-gradient">Publication List</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-6">
                 Complete collection of my research publications, including journal articles, conference papers, and book
                 chapters
               </p>
-               <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-6">
-                The PDF files of my publications are available for download in my <a href="https://www.researchgate.net/profile/Iago-Carvalho" target="_blank" rel="noopener noreferrer"><span className="text-foreground font-medium">ResearchGate profile</span></a>.
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-6">
+                The PDF files of my publications are available for download in my <a href="https://www.researchgate.net/profile/Iago-Carvalho" target="_blank" rel="noopener noreferrer"><span className="font-medium text-primary hover:text-blue-700 transition-colors">ResearchGate profile</span></a>.
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-primary"></div>
-                  <span>{totalPublications} Total Publications</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-accent"></div>
-                  <span>{Object.keys(publicationsByYear).length} Years</span>
-                </div>
-                {searchQuery && (
-                  <div className="flex items-center gap-2">
-                    <div className="h-2 w-2 rounded-full bg-primary/60"></div>
-                    <span>{filteredPublications.length} Matching Results</span>
-                  </div>
-                )}
-              </div>
             </div>
+
+            {/* Stats Section */}
+            <section className="py-12 px-4 sm:px-6 lg:px-8">
+              <div className="container mx-auto max-w-6xl">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <Card>
+                    <CardContent className="p-6 text-center">
+                      <div className="text-3xl font-bold text-primary mb-2">{totalPublications}</div>
+                      <div className="text-sm text-muted-foreground">Total Publications</div>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6 text-center">
+                      <div className="text-3xl font-bold text-primary mb-2">
+                        {publications.filter((p) => p.type === "Journal Article").length}
+                      </div>
+                      <div className="text-sm text-muted-foreground">Journal Articles</div>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardContent className="p-6 text-center">
+                      <div className="text-3xl font-bold text-primary mb-2">
+                        {publications.filter((p) => p.type === "Conference Paper").length}
+                      </div>
+                      <div className="text-sm text-muted-foreground">Conference Papers</div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </section>
 
             {/* Search and Filter Bar */}
             <div className="max-w-2xl mx-auto flex flex-col sm:flex-row gap-4">
@@ -153,6 +163,14 @@ export default function PublicationsPage() {
                 <Download className="h-4 w-4 mr-2" />
                 Export BibTeX
               </Button>
+            </div>
+          </div>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2">
+                <div className="h-2 w-2 ml-1 rounded-full bg-primary/60"></div>
+                <span className="inline-block mt-1">{filteredPublications.length} Matching Results</span>
+              </div>
             </div>
           </div>
         </section>
@@ -241,35 +259,6 @@ export default function PublicationsPage() {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8 bg-muted/30">
-          <div className="container mx-auto max-w-6xl">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">{totalPublications}</div>
-                  <div className="text-sm text-muted-foreground">Total Publications</div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">
-                    {publications.filter((p) => p.type === "Journal Article").length}
-                  </div>
-                  <div className="text-sm text-muted-foreground">Journal Articles</div>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">
-                    {publications.filter((p) => p.type === "Conference Paper").length}
-                  </div>
-                  <div className="text-sm text-muted-foreground">Conference Papers</div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>

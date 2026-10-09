@@ -28,16 +28,16 @@ export function Header() {
   ]
 
   return (
-    <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 animate-in slide-in-from-top-8 duration-500">
+    <div className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <header
         className={cn(
-          "w-full max-w-4xl rounded-full transition-all duration-300",
-          isScrolled ? "glass-card py-2 px-6 shadow-xl" : "bg-background/20 backdrop-blur-sm border border-transparent py-3 px-6"
+          "mx-auto w-full max-w-6xl px-5 sm:px-8 transition-all duration-300",
+          isScrolled ? "py-3" : "py-5"
         )}
       >
         <div className="flex items-center justify-between">
-          <a href="/" className="font-semibold text-lg text-foreground hover:text-primary transition-colors heading-font">
-            Iago A. Carvalho<span className="text-primary hidden sm:inline">, PhD</span>
+          <a href="/" className="font-semibold text-lg tracking-tight text-foreground hover:text-primary transition-colors heading-font">
+            Iago A. Carvalho<span className="text-primary hidden sm:inline"> <em>PhD</em></span>
           </a>
 
           {/* Desktop Navigation */}
@@ -67,7 +67,7 @@ export function Header() {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 mt-4 px-2">
-            <nav className="glass-card rounded-2xl py-4 flex flex-col items-center space-y-4">
+            <nav className="bg-card border border-border py-4 flex flex-col items-center space-y-4 shadow-lg">
               {navItems.map((item) => (
                 <a
                   key={item.name}

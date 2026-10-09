@@ -5,31 +5,29 @@
 
 @theme {
   --font-sans: var(--font-inter), "Inter", sans-serif;
-  --font-heading: var(--font-outfit), "Outfit", sans-serif;
+  --font-heading: var(--font-playfair), Georgia, serif;
 }
 
 :root {
-  /* Fundo claro levemente azulado (slate-50 com toque de hue 264) */
-  --background: oklch(0.97 0.008 264);
-  --foreground: oklch(0.14 0.05 264);
-  --card: oklch(0.99 0.004 264);
-  --card-foreground: oklch(0.14 0.05 264);
-  --popover: oklch(0.99 0.004 264);
-  --popover-foreground: oklch(0.14 0.05 264);
-  /* Destaques azul/roxo preservados do commit anterior */
-  --primary: oklch(0.45 0.25 264);
+  --background: oklch(0.978 0.008 85);
+  --foreground: oklch(0.21 0.02 250);
+  --card: oklch(0.99 0.006 85);
+  --card-foreground: oklch(0.21 0.02 250);
+  --popover: oklch(0.99 0.006 85);
+  --popover-foreground: oklch(0.21 0.02 250);
+  --primary: oklch(0.39 0.09 236);
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.93 0.03 264);
-  --secondary-foreground: oklch(0.2 0.05 264);
-  --muted: oklch(0.93 0.025 264);
-  --muted-foreground: oklch(0.45 0.05 264);
-  --accent: oklch(0.91 0.04 280);
-  --accent-foreground: oklch(0.2 0.05 280);
+  --secondary: oklch(0.94 0.012 85);
+  --secondary-foreground: oklch(0.26 0.02 250);
+  --muted: oklch(0.945 0.01 85);
+  --muted-foreground: oklch(0.49 0.02 250);
+  --accent: oklch(0.91 0.025 85);
+  --accent-foreground: oklch(0.26 0.02 250);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.88 0.025 264);
-  --input: oklch(0.93 0.02 264);
-  --ring: oklch(0.45 0.25 264);
+  --border: oklch(0.84 0.014 85);
+  --input: oklch(0.93 0.01 85);
+  --ring: oklch(0.39 0.09 236);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -124,27 +122,54 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground bg-fixed;
-    /* Gradientes azul/roxo visíveis no fundo claro */
-    background-image:
-      radial-gradient(circle at top right, rgba(99, 102, 241, 0.12) 0%, transparent 45%),
-      radial-gradient(circle at bottom left, rgba(56, 189, 248, 0.10) 0%, transparent 45%),
-      radial-gradient(circle at center, rgba(168, 85, 247, 0.06) 0%, transparent 60%);
+    @apply bg-background text-foreground;
+    background-image: radial-gradient(rgba(41, 58, 78, 0.14) 0.65px, transparent 0.65px);
+    background-size: 18px 18px;
   }
 }
 
 @layer utilities {
   .glass {
-    @apply bg-background/70 backdrop-blur-xl border border-primary/10 shadow-[0_4px_30px_rgba(99,102,241,0.08)];
+    @apply bg-card border border-border shadow-none;
   }
+
   .glass-card {
-    @apply bg-card/80 backdrop-blur-xl border border-primary/10 shadow-lg hover:shadow-xl hover:border-primary/20 transition-all duration-300;
+    @apply bg-card border border-border shadow-none transition-colors duration-200;
   }
+
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-blue-400 to-purple-500;
+    @apply text-primary;
   }
+
   .heading-font {
     font-family: var(--font-heading);
   }
+}
+
+::selection {
+  background: oklch(0.86 0.05 236);
+}
+
+section {
+  scroll-margin-top: 5rem;
+}
+
+/* A quiet, print-inspired surface system for the content sections. */
+.glass-card {
+  border-radius: 0 !important;
+}
+
+.glass-card:hover {
+  border-color: var(--primary) !important;
+  transform: none !important;
+}
+
+section h2.heading-font {
+  letter-spacing: -0.035em;
+}
+
+section h2.heading-font+p {
+  font-size: 1.05rem;
 }

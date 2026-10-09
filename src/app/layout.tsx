@@ -1,18 +1,17 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Outfit } from "next/font/google"
+import { Inter, Playfair_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
-const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" })
+const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" })
 
 /* <CHANGE> Updated metadata for professor's academic website */
 export const metadata: Metadata = {
   title: "Dr. Iago Augusto Carvalho - Computer Science Professor",
   description: "Academic website of Dr. Iago Augusto Carvalho, Computer Science Professor at Universidade Federal de Alfenas",
-  generator: "v0.app",
   icons: {
     icon: [
       {
@@ -39,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>

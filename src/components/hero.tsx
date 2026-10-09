@@ -1,56 +1,41 @@
 import { Button } from "@/components/ui/button"
-import { Binary, Mail, FileText, ChevronRight } from "lucide-react"
+import { ArrowDownRight, Mail, FileText } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative pt-32 pb-16 md:pt-48 md:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Abstract background elements */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] opacity-50 pointer-events-none -z-10" />
-      
-      <div className="container mx-auto max-w-5xl relative z-10">
-        <div className="flex flex-col items-center text-center space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/10 text-primary text-sm font-medium backdrop-blur-md shadow-lg shadow-primary/5 transition-transform hover:scale-105">
-            <Binary className="h-4 w-4" />
-            <span>Computer Science Researcher & Professor</span>
-          </div>
-
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500 group-hover:duration-200" />
-            <div className="relative rounded-full border-4 border-background overflow-hidden mx-auto w-40 h-40 md:w-48 md:h-48 shadow-2xl">
-              <img src="/iago.jpg" alt="Dr. Iago Augusto Carvalho" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            <h1 className="heading-font text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-balance">
-              Dr. <span className="text-gradient">Iago Augusto</span> Carvalho
+    <section className="pt-32 pb-20 md:pt-44 md:pb-28 px-5 sm:px-8">
+      <div className="mx-auto max-w-6xl border-y border-border py-10 md:py-14">
+        <div className="grid items-center gap-10 md:grid-cols-[1.35fr_.65fr] md:gap-16">
+          <div className="order-2 md:order-1">
+            <p className="mb-7 text-xs font-semibold uppercase tracking-[0.2em] text-primary">Computer Science · UNIFAL-MG</p>
+            <h1 className="heading-font max-w-3xl text-5xl font-semibold leading-[.96] tracking-[-0.045em] md:text-7xl lg:text-8xl">
+              Iago Augusto<br /><span className="text-primary">Carvalho</span>
             </h1>
-          </div>
-
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl text-pretty leading-relaxed font-light">
-            Department of Computer Science at{" "}
-            <span className="text-foreground font-medium drop-shadow-sm">Universidade Federal de Alfenas</span>
-          </p>
-
-          <p className="text-base md:text-xl text-muted-foreground/80 max-w-2xl leading-relaxed">
-            Computer and data scientist passionate for developing interdisciplinary projects.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-6 pt-8">
-            <Button size="lg" className="h-14 px-8 text-base rounded-full shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all group" asChild>
+            <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+              Professor and researcher working at the intersection of optimization, machine learning, and data science.
+            </p>
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+            <Button size="lg" className="h-12 px-6 text-sm rounded-none shadow-none group" asChild>
               <a href="#contact">
-                <Mail className="h-5 w-5 mr-2 group-hover:animate-pulse" />
+                <Mail className="h-4 w-4 mr-2" />
                 Get in Touch
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-base rounded-full border-primary/30 hover:bg-primary/5 transition-all group glass" asChild>
+            <Button size="lg" variant="outline" className="h-12 px-6 text-sm rounded-none border-border bg-transparent hover:bg-muted group" asChild>
               <a href="#publications">
-                <FileText className="h-5 w-5 mr-2" />
+                <FileText className="h-4 w-4 mr-2" />
                 View Publications
-                <ChevronRight className="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                <ArrowDownRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
             </Button>
+            </div>
           </div>
+          <figure className="order-1 md:order-2 md:justify-self-end">
+            <div className="relative aspect-[4/5] w-48 overflow-hidden border border-border bg-muted md:w-64">
+              <img src="/iago.jpg" alt="Dr. Iago Augusto Carvalho" className="h-full w-full object-cover grayscale-[20%]" />
+            </div>
+            <figcaption className="mt-3 text-xs uppercase tracking-[0.16em] text-muted-foreground">Alfenas, Brazil</figcaption>
+          </figure>
         </div>
       </div>
     </section>

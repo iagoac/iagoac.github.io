@@ -56,10 +56,7 @@ export function Contact() {
   ]
 
   return (
-    <section id="contact" className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Decorative background element */}
-      <div className="absolute right-0 top-1/2 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[100px] pointer-events-none -z-10 -translate-y-1/2 translate-x-1/3" />
-
+    <section id="contact" className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="container mx-auto max-w-4xl relative z-10">
         <div className="text-center mb-16 md:mb-24">
           <h2 className="heading-font text-4xl md:text-5xl font-bold mb-6 text-balance">
@@ -72,7 +69,6 @@ export function Contact() {
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="group relative">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/30 to-blue-500/30 rounded-2xl blur opacity-0 group-hover:opacity-40 transition duration-500" />
             <div className="relative glass-card h-full p-8 rounded-2xl">
               <h3 className="heading-font text-2xl font-bold text-foreground mb-8 flex items-center">
                 <span className="w-6 h-1 bg-primary mr-4 rounded-full"></span>
@@ -101,10 +97,9 @@ export function Contact() {
           </div>
 
           <div className="group relative">
-            <div className="absolute -inset-0.5 bg-gradient-to-l from-primary/30 to-purple-500/30 rounded-2xl blur opacity-0 group-hover:opacity-40 transition duration-500" />
             <div className="relative glass-card h-full p-8 rounded-2xl">
               <h3 className="heading-font text-2xl font-bold text-foreground mb-8 flex items-center">
-                <span className="w-6 h-1 bg-purple-500 mr-4 rounded-full"></span>
+                <span className="w-6 h-1 bg-emerald-600 mr-4 rounded-full"></span>
                 Academic Profiles
               </h3>
               <div className="grid grid-cols-2 gap-4">
@@ -122,12 +117,10 @@ export function Contact() {
         </div>
 
         <div className="mt-12 relative group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary via-blue-500 to-purple-600 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500" />
           <div className="relative glass-card p-10 md:p-12 text-center rounded-3xl border border-white/10 overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/20 to-purple-600/20 pointer-events-none" />
             <h3 className="heading-font text-3xl font-bold mb-4 text-foreground relative z-10">Office Hours</h3>
             <p className="mb-8 text-lg text-muted-foreground font-light relative z-10">Available by appointment for detailed discussions.</p>
-            <Button size="lg" className="h-14 px-8 text-base rounded-full shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all relative z-10 hover:scale-105" asChild>
+            <Button size="lg" className="h-14 px-8 text-base rounded-full shadow-none transition-colors relative z-10" asChild>
               <a href="https://calendar.app.google/QHUECcVm7A7CbM6aA" target="_blank" rel="noopener noreferrer">
                 <Mail className="h-5 w-5 mr-3 animate-pulse" />
                 Schedule a meeting

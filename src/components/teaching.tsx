@@ -42,16 +42,9 @@ export function Teaching() {
   ]
 
   return (
-    <section id="teaching" className="relative py-20 md:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-muted/5">
-      {/* Decorative background element */}
-      <div className="absolute left-0 bottom-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none -z-10 translate-y-1/3 -translate-x-1/4" />
-
+    <section id="teaching" className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16 md:mb-24">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/10 text-primary text-sm font-medium mb-6 backdrop-blur-md">
-            <GraduationCap className="h-4 w-4" />
-            Education
-          </div>
           <h2 className="heading-font text-4xl md:text-5xl font-bold mb-6 text-balance">
             Academic <span className="text-gradient">Teaching</span>
           </h2>
@@ -63,8 +56,8 @@ export function Teaching() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="glass-card p-8 text-center rounded-3xl group hover:-translate-y-2 transition-transform duration-300">
-              <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-primary/20 to-purple-500/20 flex items-center justify-center mx-auto mb-6 border border-primary/20 group-hover:scale-110 transition-transform duration-300 shadow-inner">
-                <stat.icon className="h-8 w-8 text-primary group-hover:text-purple-400 transition-colors" />
+              <div className="h-16 w-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6 border border-primary/20">
+                <stat.icon className="h-8 w-8 text-primary" />
               </div>
               <div className="text-4xl font-bold text-foreground mb-2 font-mono group-hover:text-primary transition-colors">{stat.value}</div>
               <div className="text-sm font-medium text-muted-foreground tracking-wide uppercase">{stat.label}</div>
@@ -74,13 +67,12 @@ export function Teaching() {
 
         <div className="mb-16">
           <h3 className="heading-font text-2xl md:text-3xl font-bold text-foreground mb-8 flex items-center">
-            <span className="w-8 h-1 bg-gradient-to-r from-primary to-blue-500 mr-4 rounded-full"></span>
+            <span className="w-8 h-px bg-primary mr-4"></span>
             Current Courses
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {courses.map((course, index) => (
               <div key={index} className="group relative">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/30 to-blue-500/30 rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-500" />
                 <div className="relative glass-card h-full p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:border-primary/50 transition-colors">
                   <div className="mb-6">
                     <div className="flex items-start justify-between gap-4 mb-3">
@@ -112,10 +104,9 @@ export function Teaching() {
         </div>
 
         <div className="relative group max-w-4xl mx-auto">
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-primary rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-500" />
           <div className="relative glass-card p-8 md:p-10 rounded-3xl border border-primary/20">
             <h3 className="heading-font text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center">
-              <span className="w-10 h-1 bg-gradient-to-r from-purple-500 to-primary mr-4 rounded-full"></span>
+              <span className="w-10 h-px bg-primary mr-4"></span>
               Student Opportunities
             </h3>
             <div className="space-y-4 text-muted-foreground/90 leading-relaxed text-lg font-light">
